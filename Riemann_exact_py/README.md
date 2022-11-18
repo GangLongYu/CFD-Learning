@@ -20,8 +20,11 @@ $$(\rho,u,p)=\begin{cases}(\rho^L,u^L,p^L)&x<0\\(\rho^R,u^R,p^R)&x\le 0\end{case
 - 对控制方程消元，得到关于中心区压力$p^*$的方程，用Newton法非线性求解$p^*$。得到$p^*$进而可得其他物理量。
 消元的思路是假设$p^*$已知，先消$\rho^*$，再消$Z$。
 - 具体推导过程参考: https://blog.csdn.net/meiguanhua/article/details/104454790
+
 $$u_1-u_2=f(p^*,p_1,\rho_1)+f(p^*,p_2,\rho_2)\equiv F(p^*) $$
+
 $$f(p^*,p_i,\rho_i)=\begin{cases}\dfrac{p^*-p_i}{\rho_ic_i\sqrt{\dfrac{\gamma+1}{2\gamma}\dfrac{p^*}{p_i}+\dfrac{\gamma-1}{2\gamma}}}&p^*>p_i&\text{激波}\\\dfrac{2c_i}{\gamma-1}\Big[\Big(\dfrac{p^*}{p_i}\Big)^{\frac{\gamma-1}{2\gamma}}-1\Big]&p^*<p_i&\text{膨胀波}\end{cases} $$
+
 - PS：对双稀疏波中间真空的情况，$\rho^*=0$，声速无定义，稀疏波尾计算公式为（不大理解）：
   $$z_L^{\rm{tail}}=u_L+\frac{2c_L}{\gamma-1}\qquad z_R^{\rm{tail}}=u_R-\frac{2c_R}{\gamma-1} $$
 - 牛顿法
