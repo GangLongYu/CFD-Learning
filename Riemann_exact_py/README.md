@@ -8,6 +8,7 @@
 一维Riemann问题解析解(需用Newton方法非线性求解中心区压力)。
 
 一维Euler方程，计算域为$x\in [-1,1]$。初始时刻($t=0$)物理量分布为：
+
 $$(\rho,u,p)=\begin{cases}(\rho^L,u^L,p^L)&x<0\\(\rho^R,u^R,p^R)&x\le 0\end{cases} $$
 需计算$t=t_0$时刻物理量的分布。
 
@@ -22,7 +23,6 @@ $$(\rho,u,p)=\begin{cases}(\rho^L,u^L,p^L)&x<0\\(\rho^R,u^R,p^R)&x\le 0\end{case
 - 具体推导过程参考: https://blog.csdn.net/meiguanhua/article/details/104454790
 
 $$u_1-u_2=f(p^*,p_1,\rho_1)+f(p^*,p_2,\rho_2)\equiv F(p^*) $$
-
 $$f(p^*,p_i,\rho_i)=\begin{cases}\dfrac{p^*-p_i}{\rho_ic_i\sqrt{\dfrac{\gamma+1}{2\gamma}\dfrac{p^*}{p_i}+\dfrac{\gamma-1}{2\gamma}}}&p^*>p_i&\text{激波}\\\dfrac{2c_i}{\gamma-1}\Big[\Big(\dfrac{p^*}{p_i}\Big)^{\frac{\gamma-1}{2\gamma}}-1\Big]&p^*<p_i&\text{膨胀波}\end{cases} $$
 
 - PS：对双稀疏波中间真空的情况，$\rho^*=0$，声速无定义，稀疏波尾计算公式为（不大理解）：
